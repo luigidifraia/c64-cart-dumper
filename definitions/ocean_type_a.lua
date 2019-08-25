@@ -1,11 +1,10 @@
--- Ocean type 1 dumping definition file (all cartridges excluding "Chase H.Q. II")
+-- Ocean type A dumping definition file (all Ocean cartridges excluding "Chase H.Q. II" and "Terminator 2")
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2019 Luigi Di Fraia
 
 -- Bank selection circuitry uses:
 --  128kB cartridges: TBD
 --  256kB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
---  512kB cartridges (i.e. just "Terminator 2"): bits 0-5 at $DE00 and ROML (single 512kB chip)
 
 -- Calculate the number of 8kB banks to dump
 local banks = size_kb / 8
@@ -16,10 +15,8 @@ assert_roml()
 deassert_romh()
 
 while b < banks do
-  -- Load address is $A000-$BFFF for banks 16-31,
-  -- except for "Terminator 2" (all 64 banks are 
-  -- loaded at $8000-$9FFF)
-  if b == 16 and banks ~= 64 then
+  -- Load address is $A000-$BFFF for banks 16-31
+  if b == 16 then
     deassert_roml()
     assert_romh()
   end
