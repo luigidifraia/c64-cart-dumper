@@ -5,7 +5,7 @@
 -- Bank selection circuitry uses:
 --  128kB cartridges: TBD
 --  256kB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
---  512kB cartridges (i.e. just "Terminator 2"): bits 0-5 at $DE00 (single 512kB chip)
+--  512kB cartridges (i.e. just "Terminator 2"): bits 0-5 at $DE00 and ROML (single 512kB chip)
 
 -- Calculate the number of 8kB banks to dump
 local banks = size_kb / 8
