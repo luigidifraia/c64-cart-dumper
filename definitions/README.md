@@ -4,7 +4,7 @@ This folder provides the official collection of Lua scripts for the Commodore 64
 
 ## Writing new Lua scripts
 
-The available methods for selection banks and dumping Commodore 64 cartridges are:
+The available methods for selecting banks and dumping Commodore 64 cartridges are:
  - `assert_roml()` - Sets /ROML line low
  - `assert_romh()` - Sets /ROMH line low
  - `deassert_roml()` - Sets /ROML line high
