@@ -21,8 +21,8 @@ Lua scripts can use the values of `size_kb` and `slot` but are not obliged to do
 ### Global methods
 
 The methods available to Lua scripts for selecting chips and banks, and dumping Commodore 64 cartridges are:
- - `assert_roml()` - Sets /ROML line low, thus activating the mapping of EPROM contents at $8000-$9FFF
- - `assert_romh()` - Sets /ROMH line low, thus activating the mapping of EPROM contents at $A000-$BFFF or $E000-$FFFF
+ - `assert_roml()` - Sets /ROML line low
+ - `assert_romh()` - Sets /ROMH line low
  - `deassert_roml()` - Sets /ROML line high
  - `deassert_romh()` - Sets /ROMH line high
  - `io_store(address, value)` - Sets IO `address` (0xDE00-0xDFFF) to `value` and pulses /IO1 or /IO2 accordingly
