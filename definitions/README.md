@@ -5,7 +5,7 @@ Lua revision 5.3.5 is Copyright (C) 1994-2019 Lua.org, PUC-Rio.
 
 ## Writing new definition files
 
-Everybody should feel free to contribute their definition files, patches, and documentation to this repo. In order to do so, existing definition files along with the information below should be a good starting point. 
+Everybody should feel free to contribute their definition files and patches to this folder. In order to do so, existing definition files along with the information below should be a good starting point.
 
 ### Global variables
 
@@ -20,9 +20,9 @@ Lua scripts can use the values of `size_kb` and `slot` but are not obliged to do
 
 ### Global methods
 
-The methods available to Lua scripts for selecting banks and dumping Commodore 64 cartridges are:
- - `assert_roml()` - Sets /ROML line low
- - `assert_romh()` - Sets /ROMH line low
+The methods available to Lua scripts for selecting chips and banks, and dumping Commodore 64 cartridges are:
+ - `assert_roml()` - Sets /ROML line low, thus activating the mapping of EPROM contents at $8000-$9FFF
+ - `assert_romh()` - Sets /ROMH line low, thus activating the mapping of EPROM contents at $A000-$BFFF or $E000-$FFFF
  - `deassert_roml()` - Sets /ROML line high
  - `deassert_romh()` - Sets /ROMH line high
  - `io_store(address, value)` - Sets IO `address` (0xDE00-0xDFFF) to `value` and pulses /IO1 or /IO2 accordingly
