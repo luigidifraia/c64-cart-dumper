@@ -1,15 +1,26 @@
 # Dumping definition files
 
-This folder provides the official collection of Lua scripts for the Commodore 64 Cartridge Dumper client.
+This folder provides the official collection of Lua scripts for the Commodore 64 Cartridge Dumper client.<br>
+Lua revision 5.3.5 is Copyright (C) 1994-2019 Lua.org, PUC-Rio.
 
-## Writing new Lua scripts
+## Writing new definition files
 
-The available global variables are:
- - `game` - State of the /GAME line
- - `exrom` - State of the /EXROM line
+Everybody should feel free to contribute their definition files, patches, and documentation to this repo. In order to do so, existing definition files along with the information below should be a good starting point. 
+
+### Global variables
+
+The global variables available to Lua script are:
+ - `game` - State of the /GAME line, as read by the hardware
+ - `exrom` - State of the /EXROM line, as read by the hardware
  - `size_kb` - Size in kB of the whole EPROM (defaults to 8; use the `-s` option of the client software to override)
+ - `slot` - Slot number (defaults to 0; use the `-l` option of the client software to override)
 
-The available methods for selecting banks and dumping Commodore 64 cartridges are:
+Note: The `size_kb` variable is meant to be used for same-format cartridges that use a different EPROM size, such as Ocean cartridges. The `slot` variable is meant to set an EF3 slot to dump.<br>
+Lua scripts can use the values of `size_kb` and `slot` but are not obliged to do so. As example, [ar5.lua](ar5.lua) doesn't use the value of `size_kb` as it is designed to dump 32kB cartridges, which is the standard for AR 5 and 6, thus ignoring the value of `size_kb`.
+
+### Global methods
+
+The methods available to Lua scripts for selecting banks and dumping Commodore 64 cartridges are:
  - `assert_roml()` - Sets /ROML line low
  - `assert_romh()` - Sets /ROMH line low
  - `deassert_roml()` - Sets /ROML line high
