@@ -1,6 +1,9 @@
--- Ocean type A (dual chip) dumping definition file ("Robocop 2", "Shadow of the Beast", "Space Gun")
+-- Ocean type A (dual chip) dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
--- (C) 2019 Luigi Di Fraia
+-- (C) 2019-2020 Luigi Di Fraia
+
+-- Supported titles:
+--  "Robocop 2", "Shadow of the Beast", and "Space Gun"
 
 -- Bank selection circuitry uses:
 --  256kB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
