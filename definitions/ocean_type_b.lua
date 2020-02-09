@@ -1,6 +1,9 @@
--- Ocean type B (single chip) dumping definition file (all Ocean cartridges excluding "Robocop 2", "Shadow of the Beast", "Space Gun")
+-- Ocean type B (single chip) dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
--- (C) 2019 Luigi Di Fraia
+-- (C) 2019-2020 Luigi Di Fraia
+
+-- Supported titles:
+--  All Ocean titles excluding "Robocop 2", "Shadow of the Beast", and "Space Gun"
 
 -- Bank selection circuitry uses:
 --  128kB cartridges (all known titles): bits 0-3 at $DE00 and ROML (single 128kB chip with A16 on pin 22, rather than the /OE signal)
