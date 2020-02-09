@@ -3,7 +3,9 @@
 -- (C) 2019-2020 Luigi Di Fraia
 
 -- Supported titles:
---  "Robocop 2", "Shadow of the Beast", and "Space Gun"
+--  - "Robocop 2" (tested)
+--  - "Shadow of the Beast" (not tested)
+--  - "Space Gun" (not tested)
 
 -- Bank selection circuitry uses:
 --  256kB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
