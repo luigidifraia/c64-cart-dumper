@@ -4,8 +4,8 @@
 
 -- Supported titles:
 --  - "Robocop 2" (tested)
---  - "Shadow of the Beast" (not tested)
---  - "Space Gun" (not tested)
+--  - "Shadow of the Beast" (tested)
+--  - "Space Gun" (not tested, based on existing CRT files)
 
 -- Bank selection circuitry uses:
 --  256kB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
