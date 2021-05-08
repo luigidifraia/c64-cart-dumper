@@ -2,7 +2,7 @@
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2019 Luigi Di Fraia
 
--- Don't dump ROML if it's an 8kB Ultimax cartridge
+-- Dump ROML unless it's an 8kB Ultimax cartridge
 if exrom == 0 then
   assert_roml()
   deassert_romh()
