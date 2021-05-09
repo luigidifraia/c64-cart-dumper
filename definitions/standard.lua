@@ -1,8 +1,10 @@
--- Standard (8/16 kB Normal or Ultimax) cartridge dumping definition file
+-- Standard (8/16 KiB Normal or Ultimax) cartridge dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2019 Luigi Di Fraia
 
--- Dump ROML unless it's an 8kB Ultimax cartridge
+-- A somewhat simplified logic is implemented here, assuming 8 KiB Ultimax
+
+-- Dump ROML unless it's an 8 KiB Ultimax cartridge
 if exrom == 0 then
   assert_roml()
   deassert_romh()
@@ -10,7 +12,7 @@ if exrom == 0 then
   dump_chip()
 end
 
--- Dump ROMH if it's a 16kB cartridge, either Normal ($A000-$BFFF) or Ultimax ($E000-$FFFF)
+-- Dump ROMH if it's a 16 KiB cartridge, either Normal ($A000-$BFFF) or Ultimax ($E000-$FFFF)
 if game == 0 then
   deassert_roml()
   assert_romh()
