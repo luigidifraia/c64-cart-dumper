@@ -1,6 +1,6 @@
 -- Ocean type A (dual chip) dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
--- (C) 2019-2020 Luigi Di Fraia
+-- (C) 2019-2021 Luigi Di Fraia
 
 -- Supported titles:
 --  - "Robocop 2" (tested)
@@ -8,19 +8,20 @@
 --  - "Space Gun" (not tested, based on existing CRT files)
 
 -- Bank selection circuitry uses:
---  256kB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
+--  256 KiB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
 
--- Calculate the number of 8kB banks to dump
+-- Calculate the number of 8 KiB banks to dump
 local banks = size_kb / 8
+local hstart = banks / 2
 local b = 0
 
--- Load address is $8000-$9FFF for banks 0-15
+-- Mapping is at $8000-$9FFF for banks in the lower half of the chip
 assert_roml()
 deassert_romh()
 
 while b < banks do
-  -- Load address is $A000-$BFFF for banks 16-31
-  if b == 16 then
+  -- Mapping is at $A000-$BFFF for banks in the upper hald of the chip
+  if b == hstart then
     deassert_roml()
     assert_romh()
   end
