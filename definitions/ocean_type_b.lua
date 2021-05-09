@@ -16,7 +16,7 @@ local b = 0
 
 -- Load address is $8000-$9FFF for all banks
 assert_roml()
---deassert_romh()
+deassert_romh()
 
 while b < banks do
   io_store(0xDE00, b)
