@@ -1,6 +1,6 @@
 -- Standard (8/16 KiB Normal or Ultimax) cartridge dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
--- (C) 2019 Luigi Di Fraia
+-- (C) 2019-2021 Luigi Di Fraia
 
 -- A somewhat simplified logic is implemented here, assuming 8 KiB Ultimax
 
@@ -12,7 +12,7 @@ if exrom == 0 then
   dump_chip()
 end
 
--- Dump ROMH if it's a 16 KiB cartridge, either Normal ($A000-$BFFF) or Ultimax ($E000-$FFFF)
+-- Dump ROMH (mapped at $A000-$BFFF for Normal and at $E000-$FFFF for Ultimax)
 if game == 0 then
   deassert_roml()
   assert_romh()
