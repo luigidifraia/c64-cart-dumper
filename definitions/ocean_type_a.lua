@@ -15,12 +15,12 @@ local banks = size_kb / 8
 local hstart = banks / 2
 local b = 0
 
--- Mapping is at $8000-$9FFF for banks in the lower half of the chip
+-- Mapping is at $8000-$9FFF for banks in the first chip
 assert_roml()
 deassert_romh()
 
 while b < banks do
-  -- Mapping is at $A000-$BFFF for banks in the upper hald of the chip
+  -- Mapping is at $A000-$BFFF for banks in the second chip
   if b == hstart then
     deassert_roml()
     assert_romh()
