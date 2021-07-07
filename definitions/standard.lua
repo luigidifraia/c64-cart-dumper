@@ -1,4 +1,4 @@
--- Standard (8/16 KiB Normal or Ultimax) cartridge dumping definition file
+-- Standard (8/16 KiB Normal or 8 KiB Ultimax) cartridge dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2019-2021 Luigi Di Fraia
 
