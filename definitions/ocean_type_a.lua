@@ -7,7 +7,7 @@
 --  - "Shadow of the Beast" (tested)
 
 -- Bank selection circuitry uses:
---  256 KiB cartridges (all known titles): bits 0-3 at $DE00, /ROML, and /ROMH (two 128KiB chips)
+--  256 KiB cartridges (all known titles): bits 0-3 at $DE00, /ROML, and /ROMH (two 128 KiB chips)
 
 -- Calculate the number of 8 KiB banks to dump
 local banks = size_kb / 8
