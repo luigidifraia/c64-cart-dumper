@@ -5,10 +5,9 @@
 -- Supported titles:
 --  - "Robocop 2" (tested)
 --  - "Shadow of the Beast" (tested)
---  - "Space Gun" (not tested, based on existing CRT files)
 
 -- Bank selection circuitry uses:
---  256 KiB cartridges: bits 0-3 at $DE00 and ROML/H (two 128kB chips)
+--  256 KiB cartridges (all known titles): bits 0-3 at $DE00, /ROML, and /ROMH (two 128KiB chips)
 
 -- Calculate the number of 8 KiB banks to dump
 local banks = size_kb / 8
