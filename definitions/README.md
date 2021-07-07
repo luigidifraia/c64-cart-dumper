@@ -26,4 +26,4 @@ The methods available to Lua scripts for selecting chips and banks, and dumping 
  - `deassert_roml()` - Sets the /ROML line to VCC
  - `deassert_romh()` - Sets the /ROMH line to VCC
  - `io_store(address, value)` - Sets I/O `address` (0xDE00-0xDFFF) to `value` and pulses /IO1 or /IO2 accordingly
- - `dump_chip()` - Dumps the 8KiB bank currently enabled by /ROML, /ROMH, /IO1, and /IO2
+ - `dump_chip()` - Dumps the 8 KiB bank currently enabled by /ROML, /ROMH, /IO1, and /IO2
