@@ -2,6 +2,9 @@
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2019-2021 Luigi Di Fraia
 
+-- Bank selection circuitry uses:
+--  Bits 3 and 4 at $DE00 are used to set address lines A13 and A14 of the memory chip
+
 -- 4 banks of 8 KiB each
 local banks = 4
 local b = 0
@@ -11,7 +14,6 @@ assert_roml()
 deassert_romh()
 
 while b < banks do
-  -- Bank selection circuitry uses bits 3 and 4 at $DE00 to set A13 and A14
   io_store(0xDE00, b << 3)
 
   dump_chip()
