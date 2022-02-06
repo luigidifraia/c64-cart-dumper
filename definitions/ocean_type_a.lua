@@ -1,6 +1,6 @@
--- Ocean type A (two memory chips) dumping definition file
+-- Ocean Software Type A (two memory chips) dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
--- (C) 2019-2021 Luigi Di Fraia
+-- (C) 2019-2022 Luigi Di Fraia
 
 -- Supported titles:
 --  - "Robocop 2" (tested)
