@@ -1,4 +1,4 @@
--- Ocean type A (dual chip) dumping definition file
+-- Ocean type A (two memory chips) dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2019-2021 Luigi Di Fraia
 
