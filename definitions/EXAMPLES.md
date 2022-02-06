@@ -70,6 +70,7 @@ Hardware configuration:
 cart-dumper.exe -o "Wizard of Wor (1982)(Commodore).bin" COM4
 cartconv.exe -t normal -i "Wizard of Wor (1982)(Commodore).bin" -o "Wizard of Wor (1982)(Commodore).crt" -n "WIZARD OF WOR"
 ```
+
 ---
 
 ## 8 KiB Ultimax
