@@ -151,7 +151,7 @@ cartconv.exe -t ar5 -i "Action Replay v6 (1989)(Datel Electronics).bin" -o "Acti
 
 ---
 
-## Ocean Type A (two 128 KiB memory chips)
+## Ocean Software Type A ($8000-$9FFF and $A000-$BFFF)
 
 ### Robocop 2
 
@@ -177,7 +177,7 @@ cartconv.exe -t ocean -i "Shadow of the Beast (1990)(Ocean Software).bin" -o "Sh
 
 ---
 
-## Ocean Type B (one memory chip)
+## Ocean Software Type B ($8000-$9FFF)
 
 ### Navy Seals
 
