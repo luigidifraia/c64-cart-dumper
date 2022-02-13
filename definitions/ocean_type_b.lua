@@ -16,7 +16,7 @@
 --  - A14 is set to the output of the same 75LS273 that latches bit 1 of the data bus
 --  - A15 is set to the output of the same 75LS273 that latches bit 2 of the data bus
 --  - A16 is set to the output of the same 75LS273 that latches bit 3 of the data bus
---  - latching occurs when /IO1 is asserted (i.e. the value on the address bus is in range $DE00-$DEFF)
+--  - latching occurs when /IO1 is asserted (i.e. the value on the address bus is in range $DE00-$DEFF) and PHI2 is asserted
 
 -- Calculate the number of 8 KiB banks to dump
 local banks = size_kb / 8

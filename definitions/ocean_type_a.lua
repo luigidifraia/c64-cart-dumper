@@ -16,8 +16,7 @@
 --  - for both, A16 is set to the output of the same 75LS273 that latches bit 3 of the data bus
 --  - for one chip (lower 128 KiB), /CE (Chip Enable) is connected /ROML
 --  - for the other chip (upper 128 KiB), /CE is connected to /ROMH
---  - latching occurs when /IO1 is asserted (i.e. the value on the address bus is in range $DE00-$DEFF)
-
+--  - latching occurs when /IO1 is asserted (i.e. the value on the address bus is in range $DE00-$DEFF) and PHI2 is asserted
 
 -- Calculate the number of 8 KiB banks to dump
 local banks = size_kb / 8
