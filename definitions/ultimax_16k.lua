@@ -1,4 +1,4 @@
--- 16 KiB Ultimax cartridge dumping definition file
+-- 16 KiB Ultimax cartridge ($8000-$9FFF and $E000-$FFFF) dumping definition file
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2022 Luigi Di Fraia
 
