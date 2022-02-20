@@ -2,9 +2,6 @@
 -- for the Commodore 64 Cartridge Dumper client
 -- (C) 2019-2022 Luigi Di Fraia
 
--- Bank selection circuitry uses:
---  Data bus bits 3 and 4, latched to set A13 and A14 respectively, and /IO1
-
 -- 4 banks of 8 KiB each
 local banks = 4
 local b = 0
