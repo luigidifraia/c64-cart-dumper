@@ -47,10 +47,10 @@ The bank selection circuitry uses:
 
 As an example, "Astro Marine Corps" uses two 64 KiB 28-pin EPROM chips in a piggyback configuration:
 - for both, /OE (Output Enable) is connected to /ROML,
-- for both, A13 is set to the output of a 75LS175 that latches bit 0 of the address bus
-- for both, A14 is set to the output of the same 75LS175 that latches bit 1 of the address bus
-- for both, A15 is set to the output of the same 75LS175 that latches bit 2 of the address bus
-- for one chip (lower 64 KiB), /CE (Chip Enable) is set to the output of the same 75LS175 that latches bit 3 of the address bus
+- for both, A13 is connected to the output of a 75LS175 that latches bit 0 of the address bus
+- for both, A14 is connected to the output of the same 75LS175 that latches bit 1 of the address bus
+- for both, A15 is connected to the output of the same 75LS175 that latches bit 2 of the address bus
+- for one chip (lower 64 KiB), /CE (Chip Enable) is connected to the output of the same 75LS175 that latches bit 3 of the address bus
 - for the other chip (upper 64 KiB), /CE is connected to the inverted output of the same 75LS175 that latches bit 3 of the address bus
 - latching occurs when /IO1 is asserted (i.e. the value on the address bus is in range $DE00-$DEFF) and PHI2 is asserted
 
@@ -60,10 +60,10 @@ The bank selection circuitry uses:
 - for 256 KiB cartridges (all known titles): data bus bits 0-3, /IO1, /ROML, and /ROMH (two 128 KiB chips)
 
 As an example, "Robocop 2" uses two 128 KiB 28-pin mask ROM chips:
-- for both, A13 is set to the output of a 75LS273 that latches bit 0 of the data bus
-- for both, A14 is set to the output of the same 75LS273 that latches bit 1 of the data bus
-- for both, A15 is set to the output of the same 75LS273 that latches bit 2 of the data bus
-- for both, A16 is set to the output of the same 75LS273 that latches bit 3 of the data bus
+- for both, A13 is connected to the output of a 75LS273 that latches bit 0 of the data bus
+- for both, A14 is connected to the output of the same 75LS273 that latches bit 1 of the data bus
+- for both, A15 is connected to the output of the same 75LS273 that latches bit 2 of the data bus
+- for both, A16 is connected to the output of the same 75LS273 that latches bit 3 of the data bus
 - for one chip (lower 128 KiB), /CE (Chip Enable) is connected to /ROML
 - for the other chip (upper 128 KiB), /CE is connected to /ROMH
 - latching occurs when /IO1 is asserted (i.e. the value on the address bus is in range $DE00-$DEFF) and PHI2 is asserted
@@ -77,12 +77,12 @@ The bank selection circuitry uses:
 
 As an example, "Navy Seals" uses a single 128 KiB 28-pin mask ROM chip (A16 on pin 22, rather than the /OE signal):
 - /CE (Chip Enable) is connected to /ROML,
-- A13 is set to the output of a 75LS273 that latches bit 0 of the data bus
-- A14 is set to the output of the same 75LS273 that latches bit 1 of the data bus
-- A15 is set to the output of the same 75LS273 that latches bit 2 of the data bus
-- A16 is set to the output of the same 75LS273 that latches bit 3 of the data bus
+- A13 is connected to the output of a 75LS273 that latches bit 0 of the data bus
+- A14 is connected to the output of the same 75LS273 that latches bit 1 of the data bus
+- A15 is connected to the output of the same 75LS273 that latches bit 2 of the data bus
+- A16 is connected to the output of the same 75LS273 that latches bit 3 of the data bus
 - latching occurs when /IO1 is asserted (i.e. the value on the address bus is in range $DE00-$DEFF) and PHI2 is asserted
 
 ## Acknowledgements
 
-Some of the research and reverse engineering required for supporting non-standard cartridge formats has been contributed by Richard B, who also tested the Commodore 64 Cartridge Dumper with his collection of cartridges.
+Some of the research and reverse engineering required for supporting non-standard cartridge formats has been contributed by Richard Büffing, who also tested the Commodore 64 Cartridge Dumper with his collection of cartridges.
