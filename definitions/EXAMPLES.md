@@ -151,6 +151,21 @@ cartconv.exe -t ar5 -i "Action Replay v6 (1989)(Datel Electronics).bin" -o "Acti
 
 ---
 
+## Dinamic ($8000-$9FFF)
+
+### Astro Marine Corps (AMC)
+
+Hardware configuration:
+- /GAME: pulled up (by the C64)
+- /EXROM: pulled down (by the cartridge)
+
+```
+cart-dumper.exe -f dinamic.lua -o "Astro Marine Corps (1989)(Dinamic Software).bin" -s 128 COM4
+cartconv.exe -t din -i "Astro Marine Corps (1989)(Dinamic Software).bin" -o "Astro Marine Corps (1989)(Dinamic Software).crt" -n "AMC"
+```
+
+---
+
 ## Ocean Software Type A ($8000-$9FFF and $A000-$BFFF)
 
 ### Robocop 2
